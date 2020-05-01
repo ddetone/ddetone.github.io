@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<!-- Adapted from http://cs.stanford.edu/people/karpathy/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daniel DeTone's Academic Website</title>
+  <link href="./assets/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="./assets/style.css" rel="stylesheet">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+  <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico">
+  <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+
+<!-- Tracking code -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-60574203-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+</head>
+
+<body onload="start()">
+
+<div id="header" class="bg1">
+  <div id="headerblob">
+    <!--<img src="./assets/portrait_200.png" class="img-circle imgme">-->
+    <img src="./assets/portrait2_200.jpg" class="img-circle imgme">
+    <div id="headertext">
+      <div id="htname">Daniel DeTone</div>
+      <div id="htdesc">Deep Learning  &middot; Computer Vision &middot; 3D Geometry</div>
+      <div id="htem"><span class="unselectable">Email: ddet<span class="mock">one</span><span class="hide">szaesdfx</span>@umich.edu </span></div>
+      <div id="icons">
+        <div class="svgico">
+          <a href="https://twitter.com/ddetone"><img src="./assets/twitter.svg" height="35"><span class="caption">Twitter</span></a>
+        </div>
+        <div class="svgico">
+          <a href="https://www.linkedin.com/in/ddetone/"><img src="./assets/linkedin.svg" height="35"><span class="caption">LinkedIn</span></a>
+        </div>
+        <div class="svgico">
+          <a href="https://github.com/ddetone"><img src="./assets/octocat.svg" height="35"><span class="caption">GitHub</span></a>
+        </div>
+        <div class="svgico">
+          <a href="https://scholar.google.com/citations?user=FrQGs28AAAAJ&hl=en"><img src="./assets/google-scholar.svg" height="35"><span class="caption">Scholar</span></a>
+        </div>
+        <div class="svgico">
+          <a href="./assets/Daniel_DeTone_Resume_30APR2020.pdf"> <img src="./assets/resume.svg" height="35"> <span class="caption">Résumé</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" style="font-size:18px; font-weight:300;margin-top:50px;margin-bottom:50px;">
+  <br>
+  <b>Research Interests</b>.
+  <br>
+My research interests lie at the intersection of Deep Learning, Computer Vision, 3D Geometry and their applications in Augmented Reality and Robotics. I enjoy studying how deep learning can be applied to computer vision problems including keypoint detection, image matching, relocalization, multi-view reconstruction, visual SLAM, depth estimation, homography estimation, camera calibration and bundle-adjustment.
+  <br>
+  <br>
+  <b>Bio</b>.
+  <br>
+As a member of the AI Research Team at <a href="https://www.magicleap.com/">Magic Leap</a> I worked on developing new deep learning-based methods for Visual Simultaneous Localization and Mapping (Visual SLAM) and Structure-from-Motion (SfM). I was co-advised by <a href="http://people.csail.mit.edu/tomasz/">Tomasz Malisiewicz</a> and <a href="https://scholar.google.com/citations?user=qn1ejaQAAAAJ">Andrew Rabinovich</a> and authored publications at top-tier conferences including CVPR and RSS (e.g. Deep Homography Estimation, SuperPoint and SuperGlue). I also pioneered computer vision algorithms which were ultimately deployed on the ML1 headset.
+Prior to Magic Leap, I recieved my Master's and Bachelor's degrees at the University of Michigan, where I studied Machine Learning, Computer Vision and Robotics. During my studies I worked on various small projects in areas such as person tracking, outdoor SLAM and 3D ConvNets.
+  <br><br>
+  <b>Timeline</b>.
+  <br>
+  <span class="t2when">2015-2020:</span>
+  <span class="t2who">Lead Research Engineer at Magic Leap</span>
+  <span class="t2what">Deep Learning, Visual SLAM, Mixed Reality</span>
+  <br>
+  <span class="t2when">2014:</span>
+  <span class="t2who">Occipital Internship</span>
+  <span class="t2what">RGB-D SLAM, Augmented Reality</span>
+  <br>
+  <span class="t2when">2013-2015:</span>
+  <span class="t2who">University of Michigan Master's Student</span>
+  <span class="t2what">Computer Vision, Machine Learning, Robotics</span>
+  <br>
+  <span class="t2when">2008-2013:</span>
+  <span class="t2who">University of Michigan Bachelors's Student</span>
+  <span class="t2what">Robotics, Computer Science, International Studies</span>
+
+
+  <br><br>
+  <b>News</b>.
+  <br><span class="t2when">April 2020:</span> Published <a href="https://github.com/magicleap/SuperGluePretrainedNetwork">PyTorch code</a> for SuperGlue, includes live demo and easy-to-use evaluation code.
+  <br><span class="t2when">March 2020:</span> <a href="https://arxiv.org/abs/1911.11763"> SuperGlue: Learning Feature Matching with Graph Neural Networks</a> is accepted to CVPR 2020 as an Oral.
+  <br><span class="t2when">March 2019:</span> <a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Hu_Deep_ChArUco_Dark_ChArUco_Marker_Pose_Estimation_CVPR_2019_paper.html"> Deep ChArUco: Dark ChArUco Marker Pose Estimation</a> is accepted to CVPR 2019.
+  <br><span class="t2when">November 2018:</span> Invited talk at Berkeley Artificial Intelligence Research Lab <a href="https://bair.berkeley.edu/">(BAIR)</a>.
+  <br><span class="t2when">October 2018:</span> Invited <a href="https://vimeo.com/channels/bammf/294862571">Keynote Talk</a> at the Bay Area Multimedia Forum Keynote (BAMMF) series in Palo Alto, CA.
+  <br><span class="t2when">July 2018:</span> Presented SuperPoint at <a href="http://iplab.dmi.unict.it/icvss2018/">ICVSS 2018</a> in stunning Sicily.
+  <br><span class="t2when">June 2018:</span> Published <a href="https://github.com/magicleap/SuperPointPretrainedNetwork">PyTorch code</a> for SuperPoint. Get up and running in 5 minutes or your money back!
+  <br><span class="t2when">April 2018:</span> SuperPoint selected as an <a href="http://ronnieclark.co.uk/dl4vslam/schedule.html">oral</a> at the <a href="http://visualslam.ai/">1st International Workshop on Deep Learning for Visual SLAM</a> at CVPR in Salt Lake City.
+
+</div>
+
+<hr class="soft">
+
+<div class="container">
+  <h2>Publications</h2>
+  <div id="pubs">
+
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="pubimg">
+            <img src="./assets/superglue.png">
+          </div>
+        </div>
+        <div class="col-md-7">
+          <div class="pub">
+            <div class="pubt">SuperGlue: Learning Feature Matching with Graph Neural Networks</div>
+            <div class="pubd">This paper introduces SuperGlue, a neural network that matches two sets oflocal features by jointly finding correspondences 
+              and rejecting non-matchable points. Assignments are estimated by solving a differentiable optimal transport problem, 
+              whose costs are predicted by a graph neural network. We introduce a flexible context aggregation mechanism based on attention, 
+              enabling SuperGlue to reason about the underlying 3D scene and feature assignments jointly.</div>
+            <div class="puba">Paul-Edouard Sarlin, Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</div>
+            <div class="pubv">CVPR 2020 (Oral)</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/1911.11763">Paper</a></li>
+                <li><a href="https://github.com/magicleap/SuperGluePretrainedNetwork">Code</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+            <video autoplay loop muted playsinline>
+              <source src="assets/charuco.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Deep ChArUco: Dark ChArUco Marker Pose Estimation</div>
+            <div class="pubd">We present a real-time pose estimation system which combines two custom deep networks, ChArUcoNet and RefineNet, with the Perspective-n-Point algorithm to estimate the marker's 6DoF pose. ChArUcoNet is a convolutional neural network which jointly outputs ID-specific classifiers and 2D point locations. The 2D point locations are further refined into subpixel coordinates using RefineNet. We evaluate Deep ChArUco in challenging scenarios and demonstrate that our approach is superior to a traditional OpenCV-based method.</div>
+            <div class="puba">Danying Hu, Daniel DeTone, Tomasz Malisiewicz</div>
+            <div class="pubv">CVPR 2019</div>
+            <div class="publ">
+              <ul>
+                <li><a href="http://openaccess.thecvf.com/content_CVPR_2019/html/Hu_Deep_ChArUco_Dark_ChArUco_Marker_Pose_Estimation_CVPR_2019_paper.html">Paper</a></li>
+                <li><a href="assets/deepcharuco_cvpr19_poster.pdf">Poster</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Smorg9dffc0">YouTube</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="pubimg">
+            <img src="./assets/self_improving_vo.png">
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pub">
+            <div class="pubt">Self-Improving Visual Odometry</div>
+            <div class="pubd">We propose a self-supervised learning framework that uses unlabeled monocular video sequences to generate large-scale supervision for training a Visual Odometry (VO) frontend. Our proposed frontend consists of a single multi-task CNN which outputs 2D keypoints locations, keypoint descriptors, and a novel point stability score. When trained using VO at scale on 2.5 million images, the stability classifier automatically discovers a ranking for keypoints that are not likely to help in VO, such as t-junctions across depth discontinuities, features on shadows and highlights, and dynamic objects like people.</div>
+            <div class="puba">Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</div>
+            <div class="pubv">arXiV 2018</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/1812.03245">Paper</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="pubimg">
+            <video autoplay loop muted playsinline>
+              <source src="assets/tracker.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="pub">
+            <div class="pubt">SuperPoint: Self-Supervised Interest Point Detection and Description</div>
+            <div class="pubd">This work presents a self-supervised framework for training interest point detectors and descriptors suitable for a large number of multiple-view geometry problems in computer vision. As opposed to patch-based neural networks, our fully-convolutional model operates on full-sized images and jointly computes pixel-level interest point locations and associated descriptors in one forward pass. Our model, when trained on the MS-COCO image dataset, is able to repeatedly detect a rich set of interest points and stably track them over time. </div>
+            <div class="puba">Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</div>
+            <div class="pubv">CVPR 2018 Deep Learning for Visual SLAM Workshop</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/1712.07629">Paper</a></li>
+                <li><a href="https://github.com/magicleap/SuperPointPretrainedNetwork/blob/master/assets/DL4VSLAM_talk.pdf">Slides</a></li>
+                <li><a href="http://visualslam.ai/">CVPR Workshop</a></li>
+                <li><a href="https://github.com/magicleap/SuperPointPretrainedNetwork">Code</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+          <img src="./assets/toward.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Toward Geometric Deep SLAM</div>
+            <div class="pubd">We present a point tracking system powered by two CNNs. The first network, MagicPoint, operates on single images and extracts salient 2D points. As transformation estimation is more simple when the detected points are geometrically stable, we designed a second network, MagicWarp, which operates on pairs of point images and estimates the homography that relates the inputs. </div>
+            <div class="puba">Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</div>
+            <div class="pubv">arXiV 2017</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/1707.07410">Paper</a></li>
+                <li><a href="https://www.roadtovr.com/magic-leap-researchers-reveal-deep-slam-tracking-algorithm/">Press</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pubwrap">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="pubimg">
+          <img src="./assets/homography.png">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="pub">
+            <div class="pubt">Deep Image Homography Estimation</div>
+            <div class="pubd">We present a deep convolutional neural network called HomographyNet for estimating the relative homography between a pair of images. We use a 4-point homography parameterization which maps the four corners from one image into the second image. The network is trained end-to-end using warped MS-COCO images, allow the use of large-scale training without time-consuming data collection. The HomographyNet does not require separate local feature detection and transformation estimation stages and outperforms a traditional homography estimator based on ORB.</div>
+            <div class="puba">Daniel DeTone, Tomasz Malisiewicz, Andrew Rabinovich</div>
+            <div class="pubv">RSS 2016 Workshop: Limits and Potentials of Deep Learning in Robotics</div>
+            <div class="publ">
+              <ul>
+                <li><a href="https://arxiv.org/abs/1606.03798">Paper</a></li>
+                <li><a href="http://juxi.net/workshop/deep-learning-rss-2016/">Workshop</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showmore" id="showmorepubs">
+    show more projects
+    </div>
+    <div id="morepubs">
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+            <img width="350" src="./assets/shapenets.jpg">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">3D Spatial Convnets for Semantic Segmentation</div>
+              <div class="pubd">By training a 3D spatial convnet to recognize 127,915 CAD Models in 662 different categories, we can develop a rich feature hierarchy for performing 3D semantic segmentation. </div>
+              <div class="puba">Daniel DeTone, Matthew Johnson-Roberson</div>
+              <div class="pubv">Winter 2015</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="http://modelnet.cs.princeton.edu/">ModelNet Webpage</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="pubimg">
+            <img src="./assets/fetch.png">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="pubimg">
+              <video autoplay loop muted playsinline>
+                <source src="assets/room_scan.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Structure Sensor SDK</div>
+              <div class="pubd">We built an SDK for developers to use with the Structure Sensor that includes sample code for 3D object capture, 3D room mapping, and augmented reality gaming.</div>
+              <div class="puba">Occipital</div>
+              <div class="pubv">Summer 2014</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="http://structure.io">Web Page</a></li>
+                  <li><a href="https://www.kickstarter.com/projects/occipital/structure-sensor-capture-the-world-in-3d/posts">Kickstarter</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="pubimg">
+            <img width="300" src="./assets/msail.png">
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="pub">
+              <div class="pubt">Simultaneous Environment Discovery & Annotation</div>
+              <div class="pubd">SEDA is a project for enhancing human learning by using state of the art techniques from AI. The non-technically constrained goal is to create an overlay to human vision to help with tasks humans are inherently bad at such as memory, calculations, and abstractions and to help speed up tasks such as looking up information and referencing material.</div>
+              <div class="puba">Michigan Student AI Lab (MSAIL)</div>
+              <div class="pubv">Winter 2014</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="http://s-e-d-a.github.io/">Web Page</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=8M2MnhE1Xm0&feature=youtu.be">Trailer</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="pubimg">
+            <img src="./assets/text-recognition1.jpeg">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="pubimg">
+            <img src="./assets/text-recognition2.jpeg">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Scene Text Detection and Recognition</div>
+              <div class="pubd">We built an end-to-end scene text detection and recognition framework that builds off of some recent published work of Lukas Neumann using an extremal region (ER) classifier and efficient exhaustive search.</div>
+              <div class="puba">Michigan Student AI Lab (MSAIL)</div>
+              <div class="pubv">Winter 2014</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="./assets/text-recognition-replication.pdf">Paper</a></li>
+                  <li><a href="https://github.com/S-E-D-A/SEDA-CV-TextDetection">Code (Github)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+            <img src="./assets/trajectory.png">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Robust Locally Weighted Regression for Aesthetically Pleasing Region-of-Interest Video Generation</div>
+              <div class="pubd">We provide a method that takes the output from an object tracker and creates a smoothed RoI to be viewed as the final output video. To accomplish this, we use a variation of linear regression, namely, robust locally weighted linear regression (rLWLR-Smooth).</div>
+              <div class="puba">ATLAS Collaboratory Project</div>
+              <div class="pubv">AAAI-14</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="./assets/rLWLR-Smooth.pdf">Paper</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=dy2z-wjWukE">Video #1</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=QtFjani3K9o">Video #2</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+            <img width="450" src="./assets/PTAM-for-KITTI.png">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Parallel Tracking and Mapping for Outdoor Localization</div>
+              <div class="pubd">By removing some of the long term pose optimizations and by limiting the allowed number of bundle adjustment iterations, I was able to modify PTAM to work in an outdoor localization setting. This work was used to help improve the accuracy of a multi-target tracking system.</div>
+              <div class="puba">Daniel DeTone, Yu Xiang, Silvio Savarese</div>
+              <div class="pubv">Summer 2013</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="./assets/KITTI-localization-PTAM-report.pdf">Paper</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=Xplg5SoxJJo&feature=youtu.be">Video</a></li>
+                  <li><a href="https://github.com/ddetone/PTAM-for-KITTI">Code (Github)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="pubimg">
+            <img src="./assets/slam1.png">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="pubimg">
+            <img src="./assets/slam2.png">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Robotics Competition for Autonomous SLAM and Path Planning</div>
+              <div class="pubd">We entered a mobile robot, equipped with a fisheye camera and laser pointer, in a robotics competition. To win, the robot must autonomously map a small area, shoot green triangles, and return to a starting point. We implemented a fast agglomerative line fitting algorithm, a graph-based SLAM algorithm, and a memory efficient quad-tree for map storage. Our team finished 2nd out of 8 teams.</div>
+              <div class="puba">Daniel DeTone, Ibrahim Musba, Jonathan Bendes, Andrew Segavac</div>
+              <div class="pubv">Winter 2013</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=mQQL8pmztb4">Video</a></li>
+                  <li><a href="https://github.com/ddetone/slam-robot">Code (Github)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+            <img width="450" src="./assets/kinect-projectile-retrieval.png">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Projectile Prediction and Robotic Retrieval using Kinect RGBD Video</div>
+              <div class="pubd">We developed a fully automated projectile-catching robot by affixing a small basket to a mobile robot and predicting the projectile's landing position in real-time. We implemented a detection algorithm using RGBD video from a Kinect and an estimation algorithm using linear regression. Once the landing position was calculated, we used dead-reckoning and a PID controller to navigate the mobile robot.</div>
+              <div class="puba">Daniel DeTone, Rohan Thomare, Max Keener</div>
+              <div class="pubv">Winter 2013</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=eAPe7jYkZ3I">Video</a></li>
+                  <li><a href="https://github.com/ddetone/kinect-projectile-retrieval">Code (Github)</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+            <img src="./assets/tracking_overview.png">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Tracking-by-detection in a Lecture Hall Setting</div>
+              <div class="pubd">We present a framework for tracking a single human (person-of-interest) in a lecture hall environment. It is a tracking-by-detection framework that uses a generic person detector, a novel scoring function to solve the data association problem, and a Kalman filter that provides reliable state estimation. In our scoring function, we introduce two novel subcomponents: a subscore based on the target’s width and a subscore based on the color histogram of him/her at the first time step.</div>
+              <div class="puba">ATLAS Collaboratory Project</div>
+              <div class="pubv">Fall 2013</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="./assets/KST.pdf">Paper</a></li>
+                  <li><a href="https://www.youtube.com/watch?v=JNnQpR2vdw8&feature=youtu.be">Video</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="pubwrap">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+            <img src="./assets/pf.png">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Particle Filter Tracking in a Lecture Hall Setting </div>
+              <div class="pubd">Proof of concept for using a deformable parts model in conjunction with a particle filter and efficient MCMC sampling.</div>
+              <div class="puba">ATLAS Collaboratory Project</div>
+              <div class="pubv">Fall 2013</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="https://www.youtube.com/watch?v=TgJEa1wUFyE">Video</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pubwrap" style="border-bottom: none;">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="pubimg">
+            <img src="./assets/lineararray.png">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pub">
+              <div class="pubt">Linear array of photodiodes to track a human speaker for video recording</div>
+              <div class="pubd">We present a human lecturer tracking and recording system that consists of a pan/tilt/zoom (PTZ) color video camera, a necklace of infrared LEDs and a linear photodiode array detector. Electronic output from the photodiode array is processed to generate the location of the LED necklace, which is worn by a human speaker. The LED necklace is flashed at 70Hz at a 50% duty cycle to provide noise-filtering capability. </div>
+              <div class="puba">Daniel DeTone, Homer Neal, Bob Lougheed</div>
+              <div class="pubv">JoP:CS 2012</div>
+              <div class="publ">
+                <ul>
+                  <li><a href="http://deepblue.lib.umich.edu/handle/2027.42/98636">Paper</a></li>
+                  <li><a href="http://atlascollab.umich.edu/tracking/FullLengthVersion_small.mov">Video</a></li>
+                  <li><a href="http://atlascollab.umich.edu/tracking/index.html">Project</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./assets/jquery-1.11.1.min.js"></script>
+<script src="./assets/bootstrap.min.js"></script>
+<script>
+var more_projects_shown = false;
+function start() {
+  //$("#showmoreprojects").click(function() {
+  //  if(!more_projects_shown) {
+  //    $("#moreprojects").slideDown('fast', function() {
+  //      $("#showmoreprojects").text('hide');
+  //    });
+  //    more_projects_shown = true;
+  //  } else {
+  //    $("#moreprojects").slideUp('fast', function() {
+  //      $("#showmoreprojects").text('show more');
+  //    });
+  //    more_projects_shown = false;
+  //  }
+  //});
+  var more_pubs_shown = false;
+  $("#showmorepubs").click(function() {
+    if(!more_pubs_shown) {
+      $("#morepubs").slideDown('fast', function() {
+        $("#showmorepubs").text('hide more projects');
+      });
+      more_pubs_shown = true;
+    } else {
+      $("#morepubs").slideUp('fast', function() {
+        $("#showmorepubs").text('show more projects');
+      });
+      more_pubs_shown = false;
+    }
+  });
+}
+</script>
+
+
+
+</body>
+</html>
